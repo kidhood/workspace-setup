@@ -159,6 +159,11 @@ map <leader>wv <Action>(SplitVertically)
 map <leader>ws <Action>(SplitHorizontally)
 map <leader>wu <Action>(Unsplit)
 map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+map <leader>vo <Action>(EditSourceInNewWindow)
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+
+
 
 " Display options
 map <leader>dd <action>(ToggleDistractionFreeMode)
@@ -203,13 +208,21 @@ nmap <leader>gb <Action>(Forward)
 map <leader>gc <Action>(CheckinProject)
 map <leader>gs <Action>(ActivateVersionControlToolWindow)
 map <leader>gb <Action>(Git.Branches)
+map <leader>gp <Action>(Vcs.UpdateProject)
+map <leader>gbn <Action>(GitNewBranchAction)
 
 '" Errors
 map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
 map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
 
 " Terminal
-map <Leader>t <Action>(Terminal.NewTab)
+map <leader>to <Action>(ActivateTerminalToolWindow)
+map <Leader>tn <Action>(Terminal.NewTab)
 map mc <A-n>
 map mx <A-x>
 map mp <A-p>
+
+" Window active
+map <leader>hi <Action>(HideActiveWindow)
+
+map <leader>rv <Action>(IdeaVim.ReloadVimRc.reload)
